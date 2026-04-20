@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:5100";
+const baseURL = "";
 
 function loadData() {
     axios.get(`${baseURL}/dashboard`)
