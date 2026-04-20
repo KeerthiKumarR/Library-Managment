@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <h1>📚 Library</h1>
+    <p>Manage books & members</p>
+</header>
+
+<main>
+
+    <section class="panel">
+
+        <h2>👤 Members</h2>
+
+        <div class="input-group">
+            <input id="memberName" placeholder="Enter name">
+            <button onclick="addMember()">➕ Add</button>
+        </div>
+
+        <div class="input-group">
+            <input id="deleteName" placeholder="Delete name">
+            <button class="danger" onclick="deleteMember()">🗑 Delete</button>
+        </div>
+
+        <ul id="membersList"></ul>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>📘 Books</h2>
+
+        <div class="input-group">
+            <input id="bookName" placeholder="Book name">
+            <input id="bookQty" placeholder="Qty">
+            <button onclick="addBook()">➕ Add</button>
+        </div>
+
+        <ul id="booksList"></ul>
+
+        <h2>📦 Borrow</h2>
+
+        <div class="input-group">
+            <input id="borrowName" placeholder="Member">
+            <input id="borrowBook" placeholder="Book">
+            <input id="borrowQty" placeholder="Qty">
+            <button onclick="borrowBook()">📦 Borrow</button>
+        </div>
+
+        <div class="input-group">
+           <input id="deleteBookName" placeholder="Delete book">
+           <button class="danger" onclick="deleteBook()">🗑 Delete</button>
+        </div>
+
+    </section>
+
+</main>
+
+<section class="borrowed">
+
+    <h2>📄 Borrowed Books</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Book</th>
+                <th>Qty</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="borrowedTable">
+        </tbody>
+    </table>
+
+</section>
+
+<section class="activity">
+
+    <h2>📊 Activity Log</h2>
+
+    <ul id="activityLog">
+    </ul>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
